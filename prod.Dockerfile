@@ -10,4 +10,6 @@ RUN yarn
 
 EXPOSE 3000
 
+COPY . .
+
 CMD ["yarn", "start"]

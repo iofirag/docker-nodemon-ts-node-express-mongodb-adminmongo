@@ -5,6 +5,7 @@ volumes:
 
 services:
   application:
+    restart: always
     image: docker-node-express-mongoapp
     ports:
       - '3000:3000'
@@ -15,6 +16,7 @@ services:
       - 'mongo'
 
   mongo:
+    restart: always
     image: 'mongo'
     ports:
       - '27017:27017'
@@ -24,6 +26,7 @@ services:
     # - COMPOSE_CONVERT_WINDOWS_PATHS=1
   
   adminmongo:
+    restart: always
     image: "mrvautin/adminmongo"
     environment:
       - HOST=0.0.0.0
