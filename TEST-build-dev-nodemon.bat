@@ -1,1 +1,0 @@
-docker-compose -f TEST-docker-compose.dev.nodemon.yml -f TEST-docker-compose.yml up

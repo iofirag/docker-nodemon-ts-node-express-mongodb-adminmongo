@@ -1,1 +1,0 @@
-docker-compose -f TEST-docker-compose.dev-debug.yml -f TEST-docker-compose.yml up

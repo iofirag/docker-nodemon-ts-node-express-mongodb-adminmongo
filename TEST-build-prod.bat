@@ -1,1 +1,1 @@
-docker-compose -f TEST-docker-compose.prod.yml -f TEST-docker-compose.yml up
+docker-compose -f TEST-docker-compose.prod.yml up

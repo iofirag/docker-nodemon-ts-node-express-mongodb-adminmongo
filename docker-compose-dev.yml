@@ -4,6 +4,23 @@ volumes:
   mongovolume:
 
 services:
+  application:
+    image: docker-node-express-mongoapp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: 'yarn dev'
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '3000:3000'
+      - "9229:9229"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - 'mongo'
+
   mongo:
     image: 'mongo'
     ports:
