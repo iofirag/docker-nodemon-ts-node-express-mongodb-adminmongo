@@ -11,16 +11,14 @@
       "remoteRoot": "/usr/src/app"
     },
     {
+      "name": "Docker: Attach to Node",
       "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}\\index.js",
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ]
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/",
+      "protocol": "inspector"
     }
   ]
 }
