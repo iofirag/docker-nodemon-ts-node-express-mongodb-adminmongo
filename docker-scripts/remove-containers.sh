@@ -11,7 +11,7 @@ docker rm $(docker ps -aq)
 
 # docker container stop $(docker container ls -aq)
 # docker container rm $(docker container ls -aq)
-docker rmi $(docker images -a | grep "docker-node-express-mongoapp" | awk '{print $3}')
+docker rmi $(docker images -a | grep "node-mongo-seed" | awk '{print $3}')
 # docker volume rm $(docker volume ls -q --filter dangling=true)
 docker container prune
 docker volume prune

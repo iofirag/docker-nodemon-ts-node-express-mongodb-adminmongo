@@ -5,7 +5,7 @@ volumes:
 
 services:
   application:
-    image: docker-node-express-mongoapp
+    image: iofirag/node-mongo-seed
     build:
       context: .
       dockerfile: ./Dockerfile
